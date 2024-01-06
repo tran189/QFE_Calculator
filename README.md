@@ -11,7 +11,7 @@ Example:
 `./qfe_calc` -i to use imperial units.
 Note: barometric pressure units are always in hectopascals (hPa).
 
-## """Installation""
+## """Installation"""
 
 Just download the files, and run `make` on the terminal to compile.
 If you somehow don't already have the basics to compile C code (such as `build-essential`), get it.
