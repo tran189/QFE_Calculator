@@ -8,7 +8,7 @@
 	//-i/-I: imperial altitude in ft
 	//-m/-M: metric altitude in meters
 	//1 ft = 0.3048 m exactly
-//pressure units will always be in Hpa
+//pressure units will always be in hPa
 //calculations will be done in float
 	//may update to double in future if necessary
 //TODO: port to ti-84
@@ -45,20 +45,20 @@ int main(int argc, char** argv) {
 		}
 	}
 	//input vars
-	float base_qnh;
+	float ref_qnh;
 	float targ_elev_m;
 	//intro and input
 	printf("Welcome to MasiveFire's QFE calculator (%s)\n",
 		(input_units == metric)?"metric":"imperial");
-	printf("Airfield QNH:\t\t");
-	scanf("%f", &base_qnh);
-	printf("Target elevation (%s):\t", (input_units == metric)?"m":"ft");
+	printf("Reference QNH (hPa):\t");
+	scanf("%f", &ref_qnh);
+	printf("Elevation (%s):\t\t", (input_units == metric)?"m":"ft");
 	scanf("%f", &targ_elev_m);
 	if (input_units == imperial) {
 		targ_elev_m = ft_to_m(targ_elev_m);
 	}
 	//calculate and print qfe
-	float targ_qfe = qnh_n_elev_to_qfe(base_qnh, targ_elev_m);
-	printf("Target QFE:\t\t%.0f\n", targ_qfe);
+	float targ_qfe = qnh_n_elev_to_qfe(ref_qnh, targ_elev_m);
+	printf("QFE setting:\t\t%.0f hPa\n", targ_qfe);
 	return 0;
 }
