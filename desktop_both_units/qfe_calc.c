@@ -59,6 +59,6 @@ int main(int argc, char** argv) {
 	}
 	//calculate and print qfe
 	float targ_qfe = qnh_n_elev_to_qfe(ref_qnh, targ_elev_m);
-	printf("QFE setting:\t\t%.0f hPa\n", targ_qfe);
+	printf("QFE Setting:\t\t%.0f hPa\n", targ_qfe);
 	return 0;
 }
