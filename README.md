@@ -1,4 +1,4 @@
-# Basic DCS QFE calculator
+# Basic QFE calculator
 
 Super basic QFE calculator I whipped up in less than an hour. Enter your starting QNH and target elevation, and it should spit out a QFE setting for you.
 Now it even has a port for the TI-84 CE Plus
